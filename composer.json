@@ -1,0 +1,30 @@
+{
+    "name": "bernat/blucid-console",
+    "description": "Extend lucid console commands.",
+    "keywords": ["laravel", "lucid", "console"],
+    "require": {
+        "symfony/console": "^3.1",
+        "symfony/process": "^3.1",
+        "symfony/finder": "^3.1",
+        "symfony/filesystem": "^3.1"
+    },
+    "require-dev": {
+        "lucid-arch/laravel-console": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Behind\\BLucidConsole\\": "src/"
+        }
+    },
+    "bin": ["blucid"],
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bernat Jufré",
+            "email": "info@behind.design"
+        }
+    ],
+    "require-dev": {
+    }
+}

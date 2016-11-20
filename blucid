@@ -1,0 +1,26 @@
+#!/usr/bin/env php
+<?php
+
+if (file_exists(__DIR__.'/vendor/autoload.php')) {
+    require __DIR__ . '/vendor/autoload.php';
+} else {
+    require __DIR__.'/../../../bootstrap/autoload.php';
+}
+
+$laravel = require __DIR__ . '/../../../bootstrap/app.php';
+
+$commands = [
+    new Behind\BLucidConsole\Commands\ModelMakeCommand(),
+    new Behind\BLucidConsole\Commands\ModelDeleteCommand(),
+
+    new Behind\BLucidConsole\Commands\RequestMakeCommand(),
+    new Behind\BLucidConsole\Commands\RequestDeleteCommand(),
+
+    new Behind\BLucidConsole\Commands\PolicyMakeCommand(),
+    new Behind\BLucidConsole\Commands\PolicyDeleteCommand(),
+];
+
+$app = new Symfony\Component\Console\Application('BLucid Console', '0.1.0');
+array_walk($commands, [$app, 'add']);
+
+$app->run();
