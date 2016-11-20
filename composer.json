@@ -1,5 +1,5 @@
 {
-    "name": "bernat/blucid-console",
+    "name": "behind/blucid-console",
     "description": "Extend lucid console commands.",
     "keywords": ["laravel", "lucid", "console"],
     "require": {
