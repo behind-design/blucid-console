@@ -2,7 +2,7 @@
 
 namespace Behind\BLucidConsole;
 
-trait BLucidFinder
+trait BFinder
 {
     /**
      * Get the path to the passed model.

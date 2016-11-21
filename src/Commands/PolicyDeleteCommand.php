@@ -2,7 +2,7 @@
 
 namespace Behind\BLucidConsole\Commands;
 
-use Behind\BLucidConsole\BLucidFinder;
+use Behind\BLucidConsole\BFinder;
 use Behind\BLucidConsole\Str;
 use Lucid\Console\Command;
 use Lucid\Console\Filesystem;
@@ -17,7 +17,7 @@ use Symfony\Component\Console\Input\InputArgument;
 class PolicyDeleteCommand extends SymfonyCommand
 {
     use Finder;
-    use BLucidFinder;
+    use BFinder;
     use Command;
     use Filesystem;
 
